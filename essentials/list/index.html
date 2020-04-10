@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue App</title>
+        <script src="https://unpkg.com/vue"></script>
+        <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css"></link>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li>{{color[0]}}</li>
+            </ul>
+            <ul>
+                <li v-for="col in color">{{col}}</li>
+            </ul>
+        </div>
+        <script>
+            var app = new Vue({
+                el:'#app',
+                data: {
+                    color: ['red','green','blue','yellow','orange']
+                }
+            })
+        </script>
+    </body>
+</html>
